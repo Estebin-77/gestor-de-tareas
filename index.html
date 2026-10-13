@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestor de Tareas</h1>
+    </header>
+    <main>
+        <div class="input-container">
+            <input type="text" id="inputTarea" placeholder="Escribe una nueva tarea" aria-label="Nueva tarea">
+            <button id="nuevaTarea">Añadir Tarea</button>
+        </div>
+        <p id="mensajeVacio" hidden>No tienes tareas pendientes de añadir.</p>
+        <ul id="listaTareas"></ul>
+    </main>
+    <footer>
+        <p>&copy; 2023 Tu Nombre</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

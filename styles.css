@@ -1,0 +1,191 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+}
+
+header {
+    background-color: #28a745;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+main {
+    flex: 1;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%; /* Evita que se desborde */
+    padding: 0 1rem; /* Padding lateral para evitar que los elementos toquen los bordes */
+    box-sizing: border-box;
+}
+
+#inputTarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 400px; /* Limita el ancho del botón */
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+li {
+    background: white;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+.completed .titulo-tarea {
+    text-decoration: line-through;
+    color: gray;
+}
+
+li button {
+    margin-left: 0.5rem;
+    background-color: #dc3545;
+    padding: 0.5rem;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Evita que los botones se encojan demasiado */
+    width: auto;
+max-width: none;
+}
+
+li button:first-of-type {
+    background-color: #ffc107;
+}
+
+li button:hover {
+    opacity: 0.8;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .input-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #inputTarea {
+        width: 90%;
+    }
+
+    button {
+        width: 90%;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    li button {
+        margin: 0.25rem 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    #inputTarea {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    li {
+        font-size: 0.9rem;
+    }
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #174ea6;
+    outline-offset: 3px;
+}
+
+.titulo-tarea {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    text-align: left;
+}
